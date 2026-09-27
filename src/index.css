@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Anton', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-canvas: #0C0D0E;
+  --color-surface-1: #15161A;
+  --color-surface-2: #1F2126;
+  --color-surface-3: #282A31;
+  --color-lime-accent: #C6FF00;
+  --color-lime-glow: rgba(198, 255, 0, 0.25);
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-highlight: rgba(198, 255, 0, 0.4);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0C0D0E;
+  color: #F4F4F5;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom Typography & Utility Classes */
+.font-display {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0D0E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282A31;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C6FF00;
+}
+
+/* Subtle Grid Background Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Tactical Glow Effect */
+.glow-lime {
+  box-shadow: 0 0 25px rgba(198, 255, 0, 0.25);
+}
+
+.glow-lime-sm {
+  box-shadow: 0 0 12px rgba(198, 255, 0, 0.35);
+}
+
+/* Tactile microinteractions */
+.tactile-btn {
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease, box-shadow 150ms ease;
+}
+.tactile-btn:hover {
+  transform: translateY(-2px);
+}
+.tactile-btn:active {
+  transform: scale(0.98) translateY(0);
+}
+
+/* Marquee continuous scroll */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
