@@ -157,7 +157,7 @@ export const BudgetCalculator: React.FC = () => {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#15161A] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-3">
               <Calculator className="w-3.5 h-3.5 text-[#C6FF00]" />
-              <span className="text-[#C6FF00] font-bold">07 / 09</span>
+              <span className="text-[#C6FF00] font-bold">05 / 07</span>
               <span>•</span>
               <span>PRESUPUESTO TRANSPARENTE EN VIVO</span>
             </div>

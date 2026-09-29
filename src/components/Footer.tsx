@@ -5,14 +5,14 @@ import { GithubIcon, LinkedinIcon, InstagramIcon } from './Icons';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0C0D0E] text-white pt-20 pb-12 relative overflow-hidden">
+    <footer id="contacto" className="bg-[#0C0D0E] text-white pt-20 pb-12 relative overflow-hidden scroll-mt-16">
       
       {/* Background radial glow */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#C6FF00]/10 rounded-full blur-[160px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Card 09/09 Big Final Conversion Banner */}
+        {/* Big Final Conversion Banner */}
         <div className="rounded-3xl bg-[#15161A] border border-white/10 p-8 sm:p-12 lg:p-16 mb-16 relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -20,9 +20,9 @@ export const Footer: React.FC = () => {
             {/* Left Content */}
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C0D0E] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-4">
-                <span className="text-[#C6FF00] font-bold">09 / 09</span>
+                <span className="text-[#C6FF00] font-bold">BRUTA STUDIO</span>
                 <span>•</span>
-                <span>FINAL CALL TO ACTION</span>
+                <span>CONTACTO DIRECTO</span>
               </div>
 
               <h2 className="font-display text-4xl sm:text-6xl text-white uppercase tracking-tight leading-none mb-6">

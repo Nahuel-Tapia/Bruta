@@ -34,7 +34,7 @@ export const BeforeAfterSlider: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#15161A] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-3">
-              <span className="text-[#C6FF00] font-bold">05 / 09</span>
+              <span className="text-[#C6FF00] font-bold">04 / 07</span>
               <span>•</span>
               <span>IMPACTO VISUAL REAL</span>
             </div>

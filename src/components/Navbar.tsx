@@ -16,13 +16,10 @@ export const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { label: 'Sobre Mí', href: '#sobre-mi' },
+    { label: 'Proyectos', href: '#proyectos' },
     { label: 'Servicios', href: '#servicios' },
-    { label: 'Antes/Después', href: '#comparativa' },
-    { label: 'Calculadora ROI', href: '#roi' },
-    { label: 'Planes', href: '#paquetes' },
-    { label: 'Auditoría Gratis', href: '#auditoria' },
-    { label: 'GitHub Live', href: '#github' },
+    { label: 'Precios', href: '#precios' },
+    { label: 'Sobre Mí', href: '#sobre-mi' },
   ];
 
   return (

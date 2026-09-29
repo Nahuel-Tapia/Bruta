@@ -34,7 +34,7 @@ export const AboutFounder: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#15161A] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-3">
-              <span className="text-[#C6FF00] font-bold">03 / 09</span>
+              <span className="text-[#C6FF00] font-bold">07 / 07</span>
               <span>•</span>
               <span>EL DESARROLLADOR DETRÁS DE TU PROYECTO</span>
             </div>

@@ -104,7 +104,7 @@ export const PricingPackages: React.FC = () => {
   };
 
   return (
-    <section id="paquetes" className="py-24 bg-[#0C0D0E] relative border-b border-white/10 scroll-mt-16">
+    <section id="precios" className="py-24 bg-[#0C0D0E] relative border-b border-white/10 scroll-mt-16">
       
       {/* Background glow */}
       <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#C6FF00]/5 rounded-full blur-[160px] pointer-events-none -z-10" />
@@ -115,9 +115,9 @@ export const PricingPackages: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#15161A] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-3">
-              <span className="text-[#C6FF00] font-bold">PAQUETES LLAVE EN MANO</span>
+              <span className="text-[#C6FF00] font-bold">06 / 07</span>
               <span>•</span>
-              <span>PRECIOS CERRADOS</span>
+              <span>PAQUETES LLAVE EN MANO</span>
             </div>
             <h2 className="font-display text-4xl sm:text-6xl text-white uppercase tracking-tight">
               PLANES TRANSPARENTES. <br />

@@ -2,16 +2,12 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
-import { AboutFounder } from './components/AboutFounder';
+import { GithubShowcase } from './components/GithubShowcase';
 import { ServicesBento } from './components/ServicesBento';
 import { BeforeAfterSlider } from './components/BeforeAfterSlider';
-import { RoiCalculator } from './components/RoiCalculator';
-import { ResponsiveSimulator } from './components/ResponsiveSimulator';
-import { GithubShowcase } from './components/GithubShowcase';
-import { PricingPackages } from './components/PricingPackages';
-import { ProcessTimeline } from './components/ProcessTimeline';
 import { BudgetCalculator } from './components/BudgetCalculator';
-import { FreeAuditSection } from './components/FreeAuditSection';
+import { PricingPackages } from './components/PricingPackages';
+import { AboutFounder } from './components/AboutFounder';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
@@ -23,50 +19,38 @@ export const App: React.FC = () => {
       <Navbar />
 
       <main>
-        {/* 1. Hero Section (Card 01/09 & 03/09) */}
+        {/* 1. Minimalist Editorial Hero (Uncluttered, monumental impact) */}
         <Hero />
 
-        {/* 2. Infinite Live Ticker Marquee */}
+        {/* 2. Infinite Tech Ticker */}
         <Marquee />
 
-        {/* 3. About Nahuel & Anti-Risk Technical Guarantees */}
-        <AboutFounder />
-
-        {/* 4. Services & Capabilities Bento (Card 02/09) */}
-        <ServicesBento />
-
-        {/* 5. Interactive Before vs. After Slider (Card 05/09) */}
-        <BeforeAfterSlider />
-
-        {/* 6. Interactive ROI Return on Investment Estimator */}
-        <RoiCalculator />
-
-        {/* 7. Interactive Responsive Device Sandbox (Card 04/09) */}
-        <ResponsiveSimulator />
-
-        {/* 8. Live GitHub Projects & Ecosystem Hub (Card 08/09) */}
+        {/* 3. Selected Real Projects & Production Code (Card 02/07) */}
         <GithubShowcase />
 
-        {/* 9. Turnkey Flat-Rate Packages & Monthly Maintenance MRR */}
-        <PricingPackages />
+        {/* 4. Services & Digital Capabilities (Card 03/07) */}
+        <ServicesBento />
 
-        {/* 10. 5-Step Agile Process Timeline (Card 06/09) */}
-        <ProcessTimeline />
+        {/* 5. Interactive Before vs. After Transformation (Card 04/07) */}
+        <BeforeAfterSlider />
 
-        {/* 11. Real-time Project Scope & Budget Calculator (Card 07/09) */}
+        {/* 6. Interactive Scope & Budget Calculator (Card 05/07) */}
         <BudgetCalculator />
 
-        {/* 12. Free Web Audit Lead Magnet */}
-        <FreeAuditSection />
+        {/* 7. Turnkey Packages & Monthly Maintenance (Card 06/07) */}
+        <PricingPackages />
 
-        {/* 13. Objection Buster FAQ Accordion */}
+        {/* 8. About Nahuel & Direct Technical Guarantees (Card 07/07) */}
+        <AboutFounder />
+
+        {/* 9. Objection Buster FAQ Accordion */}
         <FaqSection />
       </main>
 
-      {/* 14. High-Impact Footer & Conversion Close (Card 09/09) */}
+      {/* 10. Minimalist Footer & Conversion Close */}
       <Footer />
 
-      {/* 15. Persistent Floating WhatsApp Trigger */}
+      {/* 11. Persistent Floating WhatsApp Trigger */}
       <FloatingWhatsApp />
     </div>
   );
