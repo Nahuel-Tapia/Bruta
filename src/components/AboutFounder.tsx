@@ -1,6 +1,6 @@
 import React from 'react';
 import { STUDIO_CONFIG } from '../data/config';
-import { ShieldCheck, Zap, HeartHandshake, CheckCircle2, MessageCircle, Terminal, MapPin } from 'lucide-react';
+import { ShieldCheck, Zap, HeartHandshake, MessageCircle, Terminal, MapPin } from 'lucide-react';
 import { SpotlightCard } from './SpotlightCard';
 
 export const AboutFounder: React.FC = () => {
@@ -23,29 +23,25 @@ export const AboutFounder: React.FC = () => {
   ];
 
   return (
-    <section id="sobre-mi" className="py-24 bg-[#0C0D0E] relative border-b border-white/10 scroll-mt-16">
-      
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-0 w-80 h-80 bg-[#C6FF00]/10 rounded-full blur-[140px] pointer-events-none -z-10" />
-
+    <section id="sobre-mi" className="py-24 bg-transparent relative border-b border-zinc-200/80 dark:border-white/10 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#15161A] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-3">
-              <span className="text-[#C6FF00] font-bold">07 / 07</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-mono text-zinc-700 dark:bg-[#15161A] dark:border-white/10 dark:text-zinc-300 mb-3">
+              <span className="font-bold">07 / 07</span>
               <span>•</span>
               <span>EL DESARROLLADOR DETRÁS DE TU PROYECTO</span>
             </div>
-            <h2 className="font-display text-4xl sm:text-6xl text-white uppercase tracking-tight">
+            <h2 className="font-display text-4xl sm:text-6xl text-zinc-950 dark:text-white uppercase tracking-tight">
               TRATO DIRECTO. <br />
-              <span className="text-[#C6FF00]">SIN INTERMEDIARIOS.</span>
+              <span className="text-zinc-500 dark:text-zinc-400">SIN INTERMEDIARIOS.</span>
             </h2>
           </div>
 
-          <p className="max-w-md text-sm text-[#A1A1AA]">
-            En las agencias tradicionales hablas con vendedores y tu proyecto pasa de becario en becario. En Bruta Studio, <strong className="text-white">hablas directamente con quien programa y diseña cada píxel</strong>.
+          <p className="max-w-md text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal">
+            En las agencias tradicionales hablas con vendedores y tu proyecto pasa de becario en becario. En Bruta Studio, <strong className="text-zinc-950 dark:text-white font-medium">hablas directamente con quien programa y diseña cada píxel</strong>.
           </p>
         </div>
 
@@ -57,12 +53,12 @@ export const AboutFounder: React.FC = () => {
             <SpotlightCard className="h-full p-6 sm:p-8 flex flex-col justify-between">
               <div>
                 {/* Profile Header & Terminal Tag */}
-                <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
-                  <div className="flex items-center gap-2 text-xs font-mono text-[#777777]">
-                    <Terminal className="w-3.5 h-3.5 text-[#C6FF00]" />
+                <div className="flex items-center justify-between pb-4 border-b border-zinc-100 dark:border-white/10 mb-6">
+                  <div className="flex items-center gap-2 text-xs font-mono text-zinc-500">
+                    <Terminal className="w-3.5 h-3.5" />
                     <span>nahuel@brutastudio:~$ whoami</span>
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-black text-[#C6FF00] border border-white/10">
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-100 dark:bg-black text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-white/10">
                     LEAD DEV
                   </span>
                 </div>
@@ -70,28 +66,28 @@ export const AboutFounder: React.FC = () => {
                 {/* Avatar & Badges */}
                 <div className="flex items-center gap-4 mb-6">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#16171A] to-[#25272F] border-2 border-[#C6FF00] flex items-center justify-center overflow-hidden shadow-lg shadow-[#C6FF00]/10">
-                      <span className="font-display text-4xl text-white tracking-tighter">N</span>
+                    <div className="w-20 h-20 rounded-2xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-300 dark:border-white/20 flex items-center justify-center overflow-hidden shadow-xs">
+                      <span className="font-display text-4xl text-zinc-950 dark:text-white tracking-tighter">N</span>
                     </div>
-                    <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-[#C6FF00] border-2 border-black" title="En línea" />
+                    <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-500 border-2 border-white dark:border-black" title="En línea" />
                   </div>
                   <div>
-                    <h3 className="font-display text-2xl text-white tracking-wide uppercase">
+                    <h3 className="font-display text-2xl text-zinc-950 dark:text-white tracking-wide uppercase">
                       Nahuel
                     </h3>
-                    <p className="text-xs font-mono text-[#C6FF00]">
+                    <p className="text-xs font-mono text-zinc-600 dark:text-zinc-400">
                       Fullstack Developer & UI Specialist
                     </p>
-                    <div className="flex items-center gap-1.5 text-xs text-[#777777] font-mono mt-1">
-                      <MapPin className="w-3 h-3 text-[#A1A1AA]" />
+                    <div className="flex items-center gap-1.5 text-xs text-zinc-500 font-mono mt-1">
+                      <MapPin className="w-3 h-3 text-zinc-400" />
                       <span>{STUDIO_CONFIG.location}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Founder Statement */}
-                <p className="text-sm text-[#A1A1AA] leading-relaxed mb-6">
-                  "Creé Bruta Studio cansado de ver a marcas y profesionales pagar cientos de dólares por plantillas lentas y genéricas de WordPress que tardan 8 segundos en cargar. Programo cada sitio a medida con <strong className="text-white">React, TypeScript y Tailwind</strong> para que tu negocio tenga una identidad que no se confunda con nadie y convierta visitas en ventas."
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6 font-normal">
+                  "Creé Bruta Studio cansado de ver a marcas y profesionales pagar cientos de dólares por plantillas lentas y genéricas de WordPress que tardan 8 segundos en cargar. Programo cada sitio a medida con <strong className="text-zinc-950 dark:text-white font-medium">React, TypeScript y Tailwind</strong> para que tu negocio tenga una identidad que no se confunda con nadie y convierta visitas en ventas."
                 </p>
 
                 {/* Quick Skills Pills */}
@@ -99,7 +95,7 @@ export const AboutFounder: React.FC = () => {
                   {["React 19", "TypeScript", "Tailwind CSS", "Next.js", "CRO & Copywriting", "SEO Técnico"].map((tech) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 rounded bg-black/60 border border-white/5 text-[11px] font-mono text-zinc-300"
+                      className="px-2.5 py-1 rounded bg-zinc-100 dark:bg-black/60 border border-zinc-200 dark:border-white/5 text-[11px] font-mono text-zinc-700 dark:text-zinc-300"
                     >
                       {tech}
                     </span>
@@ -108,52 +104,51 @@ export const AboutFounder: React.FC = () => {
               </div>
 
               {/* Founder CTA Button */}
-              <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                <span className="text-xs font-mono text-[#777777]">¿Coordinamos tu proyecto?</span>
+              <div className="pt-4 border-t border-zinc-100 dark:border-white/10 flex items-center justify-between">
+                <span className="text-xs font-mono text-zinc-500">¿Coordinamos tu proyecto?</span>
                 <a
                   href={`https://wa.me/${STUDIO_CONFIG.whatsappNumber}?text=${encodeURIComponent('Hola Nahuel! Me gustaría consultar por la creación de mi web.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tactile-btn inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#C6FF00] text-black font-semibold text-xs tracking-wider uppercase hover:bg-[#d8ff33]"
+                  className="tactile-btn inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-950 text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100 font-semibold text-xs tracking-wider uppercase shadow-xs"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 fill-black" />
+                  <MessageCircle className="w-3.5 h-3.5" />
                   <span>Hablar con Nahuel</span>
                 </a>
               </div>
             </SpotlightCard>
           </div>
 
-          {/* Right Column: 3 Strict Anti-Risk Guarantees */}
+          {/* Right Column: Guarantees List */}
           <div className="lg:col-span-7 flex flex-col justify-between gap-4">
-            <div>
-              <span className="text-xs font-mono text-[#777777] uppercase block mb-3">
+            <div className="mb-2">
+              <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-2">
                 NUESTRO COMPROMISO DE CALIDAD (CERO RIESGO)
               </span>
-              <h3 className="font-display text-3xl sm:text-4xl text-white uppercase tracking-tight mb-4">
+              <h3 className="font-display text-3xl sm:text-4xl text-zinc-950 dark:text-white uppercase tracking-tight">
                 GARANTÍAS TÉCNICAS <br />
-                <span className="text-[#C6FF00]">QUE NADIE MÁS TE DA.</span>
+                <span className="text-zinc-500 dark:text-zinc-400">QUE NADIE MÁS TE DA.</span>
               </h3>
-              <p className="text-sm text-[#A1A1AA] mb-6">
+              <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 mt-2 font-normal">
                 Comprar una web suele generar incertidumbre. Por eso eliminamos todo el riesgo de tu lado con compromisos contractuales claros:
               </p>
             </div>
 
-            <div className="flex flex-col gap-3">
-              {guarantees.map((item, idx) => {
-                const IconComponent = item.icon;
+            <div className="space-y-4">
+              {guarantees.map((g, idx) => {
+                const Icon = g.icon;
                 return (
-                  <SpotlightCard key={idx} className="p-5">
+                  <SpotlightCard key={idx} className="p-6">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-xl bg-black border border-white/10 text-[#C6FF00] shrink-0 mt-0.5">
-                        <IconComponent className="w-5 h-5" />
+                      <div className="w-10 h-10 rounded-xl bg-zinc-100 border border-zinc-200 text-zinc-900 dark:bg-black dark:border-white/10 dark:text-white flex items-center justify-center shrink-0">
+                        <Icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="font-display text-lg text-white uppercase tracking-wide mb-1 flex items-center gap-2">
-                          <span>{item.title}</span>
-                          <CheckCircle2 className="w-4 h-4 text-[#C6FF00]" />
+                        <h4 className="font-display text-xl text-zinc-950 dark:text-white uppercase tracking-wide mb-1">
+                          {g.title}
                         </h4>
-                        <p className="text-xs sm:text-sm text-[#A1A1AA] leading-relaxed">
-                          {item.desc}
+                        <p className="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-normal">
+                          {g.desc}
                         </p>
                       </div>
                     </div>

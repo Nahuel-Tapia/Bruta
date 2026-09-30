@@ -26,5 +26,6 @@ dist-ssr
 # Scratch & Capture scripts
 capture.js
 take_screenshots.mjs
+capture_themes.mjs
 screenshot*.png
 

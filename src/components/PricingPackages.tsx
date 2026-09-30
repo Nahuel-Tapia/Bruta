@@ -93,8 +93,8 @@ export const PricingPackages: React.FC = () => {
         'Hasta 5 horas mensuales de modificaciones y nuevas secciones',
         'Auditoría mensual de posicionamiento SEO y PageSpeed',
         'Subida y optimización de nuevos productos / posts de blog',
-        'Canal privado de WhatsApp para consultas urgentes',
-        'Reunión mensual de 30 min de estrategia digital',
+        'Reporte mensual de rendimiento y visitas',
+        'Canal prioritario de emergencias',
       ],
     },
   ];
@@ -104,42 +104,42 @@ export const PricingPackages: React.FC = () => {
   };
 
   return (
-    <section id="precios" className="py-24 bg-[#0C0D0E] relative border-b border-white/10 scroll-mt-16">
-      
-      {/* Background glow */}
-      <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#C6FF00]/5 rounded-full blur-[160px] pointer-events-none -z-10" />
-
+    <section id="precios" className="py-24 bg-transparent relative border-b border-zinc-200/80 dark:border-white/10 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#15161A] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-3">
-              <span className="text-[#C6FF00] font-bold">06 / 07</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-mono text-zinc-700 dark:bg-[#15161A] dark:border-white/10 dark:text-zinc-300 mb-3">
+              <span className="font-bold">06 / 07</span>
               <span>•</span>
               <span>PAQUETES LLAVE EN MANO</span>
             </div>
-            <h2 className="font-display text-4xl sm:text-6xl text-white uppercase tracking-tight">
+            <h2 className="font-display text-4xl sm:text-6xl text-zinc-950 dark:text-white uppercase tracking-tight">
               PLANES TRANSPARENTES. <br />
-              <span className="text-[#C6FF00]">SIN COSTOS OCULTOS.</span>
+              <span className="text-zinc-500 dark:text-zinc-400">SIN COSTOS OCULTOS.</span>
             </h2>
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
             {/* Currency selector */}
-            <div className="flex rounded-lg bg-[#15161A] border border-white/10 p-1">
+            <div className="flex rounded-lg bg-zinc-100 border border-zinc-200 dark:bg-[#15161A] dark:border-white/10 p-1">
               <button
                 onClick={() => setCurrency('USD')}
-                className={`px-3 py-1 rounded-md text-xs font-mono transition-colors ${
-                  currency === 'USD' ? 'bg-[#C6FF00] text-black font-bold' : 'text-[#A1A1AA] hover:text-white'
+                className={`px-3 py-1 rounded-md text-xs font-mono transition-colors cursor-pointer ${
+                  currency === 'USD' 
+                    ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-bold shadow-xs' 
+                    : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white'
                 }`}
               >
                 USD ($)
               </button>
               <button
                 onClick={() => setCurrency('ARS')}
-                className={`px-3 py-1 rounded-md text-xs font-mono transition-colors ${
-                  currency === 'ARS' ? 'bg-[#C6FF00] text-black font-bold' : 'text-[#A1A1AA] hover:text-white'
+                className={`px-3 py-1 rounded-md text-xs font-mono transition-colors cursor-pointer ${
+                  currency === 'ARS' 
+                    ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-bold shadow-xs' 
+                    : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white'
                 }`}
               >
                 ARS ($)
@@ -150,23 +150,23 @@ export const PricingPackages: React.FC = () => {
 
         {/* Tab switch between One-Time and Maintenance */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 rounded-2xl bg-[#15161A] border border-white/10">
+          <div className="inline-flex p-1.5 rounded-2xl bg-zinc-100 border border-zinc-200 dark:bg-[#15161A] dark:border-white/10">
             <button
               onClick={() => setBillingMode('onetime')}
-              className={`px-5 py-2.5 rounded-xl font-display text-sm tracking-wider uppercase transition-all ${
+              className={`px-5 py-2.5 rounded-xl font-display text-sm tracking-wider uppercase transition-all cursor-pointer ${
                 billingMode === 'onetime'
-                  ? 'bg-[#C6FF00] text-black font-bold shadow-md shadow-[#C6FF00]/10'
-                  : 'text-[#A1A1AA] hover:text-white'
+                  ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-bold shadow-xs'
+                  : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white'
               }`}
             >
-              ★ Proyectos Web Llave en Mano
+              Proyectos Web Llave en Mano
             </button>
             <button
               onClick={() => setBillingMode('maintenance')}
-              className={`px-5 py-2.5 rounded-xl font-display text-sm tracking-wider uppercase transition-all flex items-center gap-1.5 ${
+              className={`px-5 py-2.5 rounded-xl font-display text-sm tracking-wider uppercase transition-all flex items-center gap-1.5 cursor-pointer ${
                 billingMode === 'maintenance'
-                  ? 'bg-[#C6FF00] text-black font-bold shadow-md shadow-[#C6FF00]/10'
-                  : 'text-[#A1A1AA] hover:text-white'
+                  ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-bold shadow-xs'
+                  : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-950 dark:hover:text-white'
               }`}
             >
               <Server className="w-3.5 h-3.5" />
@@ -184,7 +184,9 @@ export const PricingPackages: React.FC = () => {
                 <SpotlightCard
                   key={pkg.id}
                   className={`p-6 sm:p-8 flex flex-col justify-between ${
-                    isPopular ? 'border-[#C6FF00] ring-1 ring-[#C6FF00]/60 shadow-2xl shadow-[#C6FF00]/10' : ''
+                    isPopular 
+                      ? 'border-zinc-950 dark:border-white ring-1 ring-zinc-950 dark:ring-white shadow-lg' 
+                      : 'border-zinc-200/80 dark:border-white/10'
                   }`}
                 >
                   <div>
@@ -192,30 +194,30 @@ export const PricingPackages: React.FC = () => {
                     <div className="flex items-center justify-between mb-4">
                       <span className={`text-[10px] font-mono px-3 py-1 rounded-full uppercase font-bold tracking-wider ${
                         isPopular
-                          ? 'bg-[#C6FF00] text-black'
-                          : 'bg-[#0C0D0E] text-[#A1A1AA] border border-white/10'
+                          ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950'
+                          : 'bg-zinc-100 text-zinc-700 border border-zinc-200 dark:bg-black/50 dark:text-zinc-300 dark:border-white/10'
                       }`}>
                         {pkg.tag}
                       </span>
-                      <span className="text-xs font-mono text-[#777777]">
+                      <span className="text-xs font-mono text-zinc-500">
                         ⏱ {pkg.deliveryTime}
                       </span>
                     </div>
 
-                    <h3 className="font-display text-2xl sm:text-3xl text-white uppercase tracking-tight mb-2">
+                    <h3 className="font-display text-2xl sm:text-3xl text-zinc-950 dark:text-white uppercase tracking-tight mb-2">
                       {pkg.name}
                     </h3>
-                    <p className="text-xs text-[#A1A1AA] mb-6 leading-relaxed">
+                    <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed font-normal">
                       {pkg.desc}
                     </p>
 
                     {/* Price display */}
-                    <div className="py-4 border-y border-white/5 mb-6">
-                      <span className="text-[11px] font-mono text-[#777777] uppercase block mb-1">
+                    <div className="py-4 border-y border-zinc-100 dark:border-white/5 mb-6">
+                      <span className="text-[11px] font-mono text-zinc-500 uppercase block mb-1">
                         INVERSIÓN ÚNICA:
                       </span>
                       <div className="flex items-baseline gap-1">
-                        <span className="font-display text-4xl sm:text-5xl text-white">
+                        <span className="font-display text-4xl sm:text-5xl text-zinc-950 dark:text-white">
                           {formatPrice(pkg.priceUSD, pkg.priceARS)}
                         </span>
                       </div>
@@ -227,8 +229,8 @@ export const PricingPackages: React.FC = () => {
                     {/* Features list */}
                     <ul className="space-y-3 mb-8">
                       {pkg.features.map((feat, i) => (
-                        <li key={i} className="flex items-start gap-2.5 text-xs text-zinc-300">
-                          <Check className="w-4 h-4 text-[#C6FF00] shrink-0 mt-0.5" />
+                        <li key={i} className="flex items-start gap-2.5 text-xs text-zinc-600 dark:text-zinc-300 font-normal">
+                          <Check className="w-4 h-4 text-zinc-900 dark:text-white shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -240,10 +242,10 @@ export const PricingPackages: React.FC = () => {
                     href={`https://wa.me/${STUDIO_CONFIG.whatsappNumber}?text=${encodeURIComponent(`Hola Nahuel! Me interesa contratar el paquete ${pkg.name} (${formatPrice(pkg.priceUSD, pkg.priceARS)}). ¿Podemos coordinar para arrancar?`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`tactile-btn w-full py-3.5 rounded-xl font-display text-base tracking-wider uppercase flex items-center justify-center gap-2 text-center transition-all ${
+                    className={`tactile-btn w-full py-3.5 rounded-xl font-display text-base tracking-wider uppercase flex items-center justify-center gap-2 text-center transition-all shadow-xs ${
                       isPopular
-                        ? 'bg-[#C6FF00] text-black font-bold hover:bg-[#d8ff33] glow-lime'
-                        : 'bg-[#0C0D0E] border border-white/10 text-white hover:border-[#C6FF00]'
+                        ? 'bg-zinc-950 text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100 font-bold'
+                        : 'bg-white hover:bg-zinc-50 border border-zinc-300 text-zinc-900 dark:bg-transparent dark:border-white/15 dark:text-white dark:hover:bg-white/5'
                     }`}
                   >
                     <span>ELEGIR ESTE PAQUETE →</span>
@@ -258,33 +260,33 @@ export const PricingPackages: React.FC = () => {
         {billingMode === 'maintenance' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
             {maintenancePlans.map((plan, idx) => (
-              <SpotlightCard key={idx} className="p-8 flex flex-col justify-between">
+              <SpotlightCard key={idx} className="p-8 flex flex-col justify-between border-zinc-200/80 dark:border-white/10">
                 <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0C0D0E] border border-white/10 text-xs font-mono text-[#C6FF00] mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-mono text-zinc-700 dark:bg-black/50 dark:border-white/10 dark:text-zinc-300 mb-4">
                     <Server className="w-3.5 h-3.5" />
                     <span>INGRESO RECURRENTE & TRANQUILIDAD</span>
                   </div>
 
-                  <h3 className="font-display text-3xl text-white uppercase tracking-tight mb-2">
+                  <h3 className="font-display text-3xl text-zinc-950 dark:text-white uppercase tracking-tight mb-2">
                     {plan.name}
                   </h3>
-                  <p className="text-xs text-[#A1A1AA] mb-6">
+                  <p className="text-xs text-zinc-600 dark:text-zinc-400 mb-6 font-normal">
                     {plan.desc}
                   </p>
 
-                  <div className="py-4 border-y border-white/5 mb-6 flex items-baseline gap-2">
-                    <span className="font-display text-4xl text-[#C6FF00]">
+                  <div className="py-4 border-y border-zinc-100 dark:border-white/5 mb-6 flex items-baseline gap-2">
+                    <span className="font-display text-4xl text-zinc-950 dark:text-white">
                       {formatPrice(plan.priceUSD, plan.priceARS)}
                     </span>
-                    <span className="text-xs font-mono text-[#777777] uppercase">
+                    <span className="text-xs font-mono text-zinc-500 uppercase">
                       {plan.period}
                     </span>
                   </div>
 
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((f, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-xs text-zinc-300">
-                        <Check className="w-4 h-4 text-[#C6FF00] shrink-0 mt-0.5" />
+                      <li key={i} className="flex items-start gap-2.5 text-xs text-zinc-600 dark:text-zinc-300 font-normal">
+                        <Check className="w-4 h-4 text-zinc-900 dark:text-white shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </li>
                     ))}
@@ -295,7 +297,7 @@ export const PricingPackages: React.FC = () => {
                   href={`https://wa.me/${STUDIO_CONFIG.whatsappNumber}?text=${encodeURIComponent(`Hola Nahuel! Me gustaría contratar el ${plan.name} para mantener mi sitio web.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="tactile-btn w-full py-3.5 rounded-xl bg-[#C6FF00] text-black font-display text-base tracking-wider uppercase text-center hover:bg-[#d8ff33] glow-lime-sm"
+                  className="tactile-btn w-full py-3.5 rounded-xl bg-zinc-950 text-white hover:bg-black dark:bg-white dark:text-zinc-950 dark:hover:bg-zinc-100 font-display text-base tracking-wider uppercase text-center shadow-xs"
                 >
                   <span>SUSCRIBIR PLAN POR WHATSAPP →</span>
                 </a>

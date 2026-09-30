@@ -9,7 +9,7 @@ interface SpotlightCardProps {
 export const SpotlightCard: React.FC<SpotlightCardProps> = ({
   children,
   className = '',
-  glowColor = 'rgba(198, 255, 0, 0.12)',
+  glowColor,
 }) => {
   const divRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
@@ -30,14 +30,16 @@ export const SpotlightCard: React.FC<SpotlightCardProps> = ({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className={`relative overflow-hidden rounded-2xl border border-white/10 bg-[#15161A] transition-all duration-300 ${className}`}
+      className={`relative overflow-hidden rounded-2xl border border-zinc-200/80 bg-white dark:border-white/10 dark:bg-[#121316] transition-all duration-300 ${className}`}
     >
       {/* Spotlight Radial Overlay */}
       <div
         className="pointer-events-none absolute -inset-px transition-opacity duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${glowColor}, transparent 40%)`,
+          background: glowColor 
+            ? `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${glowColor}, transparent 40%)`
+            : undefined,
         }}
       />
       <div className="relative z-10">{children}</div>

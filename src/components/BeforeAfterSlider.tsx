@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
-import { ArrowLeftRight, Check, Sparkles, Zap } from 'lucide-react';
+import { ArrowLeftRight, Check, Zap, Sparkles } from 'lucide-react';
 
 export const BeforeAfterSlider: React.FC = () => {
   const [sliderPosition, setSliderPosition] = useState<number>(50);
@@ -27,38 +27,38 @@ export const BeforeAfterSlider: React.FC = () => {
   };
 
   return (
-    <section id="comparativa" className="py-24 bg-[#0C0D0E] relative border-b border-white/10">
+    <section id="comparativa" className="py-24 bg-transparent relative border-b border-zinc-200/80 dark:border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#15161A] border border-white/10 text-xs font-mono text-[#A1A1AA] mb-3">
-              <span className="text-[#C6FF00] font-bold">04 / 07</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-xs font-mono text-zinc-700 dark:bg-[#15161A] dark:border-white/10 dark:text-zinc-300 mb-3">
+              <span className="font-bold">04 / 07</span>
               <span>•</span>
               <span>IMPACTO VISUAL REAL</span>
             </div>
-            <h2 className="font-display text-4xl sm:text-6xl text-white uppercase tracking-tight">
-              EL DISEÑO TAMBIÉN <span className="text-[#C6FF00]">COMUNICA.</span>
+            <h2 className="font-display text-4xl sm:text-6xl text-zinc-950 dark:text-white uppercase tracking-tight">
+              EL DISEÑO TAMBIÉN <span className="text-zinc-500 dark:text-zinc-400">COMUNICA.</span>
             </h2>
           </div>
-          <p className="max-w-md text-sm text-[#A1A1AA]">
-            Una buena web no solamente funciona: <strong className="text-white">construye autoridad instantánea</strong> y transforma visitantes escépticos en clientes listos para comprar.
+          <p className="max-w-md text-sm text-zinc-600 dark:text-zinc-400 font-normal">
+            Una buena web no solamente funciona: <strong className="text-zinc-950 dark:text-white font-medium">construye autoridad instantánea</strong> y transforma visitantes escépticos en clientes listos para comprar.
           </p>
         </div>
 
         {/* Drag Instructions Bar */}
-        <div className="flex items-center justify-between mb-4 px-2 text-xs font-mono text-[#777777]">
-          <div className="flex items-center gap-2 text-red-400">
-            <span className="w-2 h-2 rounded-full bg-red-400"></span>
+        <div className="flex items-center justify-between mb-4 px-2 text-xs font-mono">
+          <div className="flex items-center gap-2 text-red-500">
+            <span className="w-2 h-2 rounded-full bg-red-500"></span>
             <span>BEFORE: Web Genérica & Lenta</span>
           </div>
-          <div className="hidden sm:flex items-center gap-1.5 text-zinc-400">
-            <ArrowLeftRight className="w-3.5 h-3.5 text-[#C6FF00]" />
+          <div className="hidden sm:flex items-center gap-1.5 text-zinc-500">
+            <ArrowLeftRight className="w-3.5 h-3.5" />
             <span>Arrastrá el divisor para comparar</span>
           </div>
-          <div className="flex items-center gap-2 text-[#C6FF00]">
-            <span className="w-2 h-2 rounded-full bg-[#C6FF00] animate-pulse"></span>
+          <div className="flex items-center gap-2 text-zinc-900 dark:text-zinc-200 font-medium">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span>AFTER: Bruta Studio (Alta Conversión)</span>
           </div>
         </div>
@@ -70,19 +70,19 @@ export const BeforeAfterSlider: React.FC = () => {
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
           onTouchMove={handleTouchMove}
-          className="relative h-[480px] sm:h-[540px] rounded-2xl border border-white/10 overflow-hidden select-none cursor-ew-resize shadow-2xl bg-[#15161A]"
+          className="relative h-[480px] sm:h-[540px] rounded-2xl border border-zinc-200/80 dark:border-white/10 overflow-hidden select-none cursor-ew-resize shadow-md bg-zinc-900"
         >
           {/* AFTER LAYER (FULL BACKGROUND) */}
           <div className="absolute inset-0 bg-[#0C0D0E] p-6 sm:p-10 flex flex-col justify-between overflow-hidden z-0">
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded bg-[#16171A] border border-[#C6FF00]/40 flex items-center justify-center font-display text-[#C6FF00] text-sm">
+                  <div className="w-8 h-8 rounded bg-[#16171A] border border-white/20 flex items-center justify-center font-display text-white text-sm">
                     nu
                   </div>
                   <span className="font-display tracking-wider text-white text-base">AVENTURA EXPEDITIONS</span>
                 </div>
-                <div className="px-3 py-1 rounded-full bg-[#C6FF00]/10 border border-[#C6FF00]/30 text-[#C6FF00] text-xs font-mono">
+                <div className="px-3 py-1 rounded-full bg-white/10 border border-white/20 text-white text-xs font-mono">
                   ⚡ 0.5s Carga • WhatsApp Directo
                 </div>
               </div>
@@ -90,17 +90,17 @@ export const BeforeAfterSlider: React.FC = () => {
               {/* 2-column layout for modern after preview */}
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center mt-3">
                 <div className="md:col-span-7">
-                  <span className="text-xs font-mono text-[#C6FF00] uppercase tracking-widest block mb-2">
+                  <span className="text-xs font-mono text-zinc-400 uppercase tracking-widest block mb-2">
                     EXPERIENCIAS DE MONTAÑA & OUTDOOR
                   </span>
                   <h3 className="font-display text-3xl sm:text-5xl text-white uppercase tracking-tight leading-none mb-3">
                     TU PRÓXIMA AVENTURA <br />
-                    <span className="text-[#C6FF00]">EMPIEZA ACÁ.</span>
+                    <span>EMPIEZA ACÁ.</span>
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#A1A1AA] mb-4">
+                  <p className="text-xs sm:text-sm text-zinc-400 mb-4 font-normal">
                     Expediciones guiadas por la Patagonia con reserva instantánea y asesoramiento por WhatsApp en menos de 5 minutos.
                   </p>
-                  <button className="px-5 py-2.5 rounded-full bg-[#C6FF00] text-black font-semibold text-xs tracking-wider uppercase glow-lime-sm">
+                  <button className="px-5 py-2.5 rounded-full bg-white text-zinc-950 font-semibold text-xs tracking-wider uppercase shadow-xs">
                     RESERVAR CUPO POR WHATSAPP →
                   </button>
                 </div>
@@ -113,12 +113,12 @@ export const BeforeAfterSlider: React.FC = () => {
                         alt="Patagonia" 
                         className="w-full h-full object-cover"
                       />
-                      <span className="absolute bottom-2 left-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/80 text-[#C6FF00]">
+                      <span className="absolute bottom-2 left-2 text-[10px] font-mono px-2 py-0.5 rounded bg-black/80 text-white">
                         CUPOS 2026 ABIERTOS
                       </span>
                     </div>
                     <div className="text-xs font-display text-white uppercase">Trekking Fitz Roy 4D/3N</div>
-                    <div className="flex items-center justify-between text-[11px] font-mono text-[#C6FF00] mt-1">
+                    <div className="flex items-center justify-between text-[11px] font-mono text-zinc-300 mt-1">
                       <span>Desde $180 USD</span>
                       <span className="text-white text-[10px]">⭐ 4.9 (120 reseñas)</span>
                     </div>
@@ -128,93 +128,95 @@ export const BeforeAfterSlider: React.FC = () => {
             </div>
 
             <div className="relative z-10 pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-zinc-400">
-              <span className="text-[#C6FF00]">✓ Arquitectura moderna en React + Tailwind</span>
+              <span className="text-white">✓ Arquitectura moderna en React + Tailwind</span>
               <span>Tasa de conversión: 14.8%</span>
             </div>
-
-            {/* Glowing Accent background */}
-            <div className="absolute top-1/2 right-10 w-96 h-96 bg-[#C6FF00]/15 rounded-full blur-[100px] pointer-events-none" />
           </div>
 
           {/* BEFORE LAYER (CLIPPED WITH HIGH Z-INDEX & INSET CLIP) */}
           <div 
-            className="absolute inset-0 bg-[#EFEFEF] text-[#222222] p-6 sm:p-12 flex flex-col justify-between overflow-hidden z-20"
+            className="absolute inset-0 bg-[#F4F4F5] text-zinc-800 p-6 sm:p-10 flex flex-col justify-between overflow-hidden z-20 pointer-events-none"
             style={{ 
-              clipPath: `inset(0 ${100 - sliderPosition}% 0 0)`
+              clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` 
             }}
           >
             <div>
-              <div className="flex items-center justify-between mb-6 pb-2 border-b border-gray-300">
-                <div className="flex items-center gap-2">
-                  <span className="text-base font-serif font-bold text-gray-800">Aventura SRL - Inicio</span>
-                </div>
-                <span className="text-[11px] font-mono text-red-700 bg-red-100 px-2 py-0.5 rounded border border-red-300">
-                  ⚠️ Plantilla lenta (6.8s) • Cero optimización
+              <div className="flex items-center justify-between border-b border-zinc-300 pb-3 mb-6">
+                <span className="font-serif text-lg tracking-wide text-zinc-700">Aventura SRL - Inicio</span>
+                <span className="text-xs font-mono text-red-600 bg-red-100 px-2 py-0.5 border border-red-300">
+                  ⚠️ 6.8s Carga • No responsive
                 </span>
               </div>
 
-              <div className="mt-6 max-w-lg">
-                <span className="text-xs text-gray-600 block mb-2 font-mono">PÁGINA WEB CORPORATIVA 2012</span>
-                <h3 className="font-serif text-3xl sm:text-5xl text-gray-900 mb-4 leading-tight">
+              <div className="max-w-xl">
+                <span className="text-xs uppercase text-zinc-500 font-mono tracking-widest block mb-2">
+                  PÁGINA WEB CORPORATIVA 2012
+                </span>
+                <h3 className="font-serif text-3xl sm:text-5xl text-zinc-900 leading-tight mb-4 font-normal">
                   Bienvenidos a Nuestro Sitio Web Oficial
                 </h3>
-                <p className="text-xs sm:text-sm text-gray-700 mb-6 leading-relaxed">
+                <p className="text-xs sm:text-sm text-zinc-600 mb-6 leading-relaxed">
                   Somos una empresa dedicada al turismo y servicios afines desde 2008. Para consultas llene el formulario de 14 campos y le responderemos en 48 horas hábiles.
                 </p>
-                <div className="flex items-center gap-2">
-                  <button className="px-4 py-2 bg-gray-300 border border-gray-400 text-gray-800 text-xs rounded shadow-inner">
+
+                <div className="flex items-center gap-3">
+                  <div className="px-4 py-2 border border-zinc-400 bg-zinc-200 text-xs text-zinc-700 shadow-inner">
                     Enviar Consulta
-                  </button>
-                  <button className="px-4 py-2 bg-gray-200 border border-gray-400 text-gray-700 text-xs rounded">
+                  </div>
+                  <div className="px-4 py-2 border border-zinc-400 bg-zinc-100 text-xs text-zinc-600">
                     Descargar Folleto Word
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="pt-6 border-t border-gray-300 flex items-center justify-between text-xs text-gray-600 font-mono">
-              <span className="text-red-700">✗ Plantilla obsoleta • Sin adaptación móvil real</span>
+            <div className="pt-4 border-t border-zinc-300 text-xs text-zinc-600 font-mono flex items-center justify-between">
+              <span className="text-red-600">✕ Plantilla obsoleta • Sin adaptación móvil real</span>
               <span>Tasa de conversión: 1.2%</span>
             </div>
           </div>
 
-          {/* SLIDER HANDLE */}
+          {/* DRAGGABLE DIVIDER HANDLE */}
           <div 
-            className="absolute top-0 bottom-0 w-1 bg-[#C6FF00] pointer-events-none shadow-[0_0_15px_rgba(198,255,0,0.8)] z-30"
+            className="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize z-30 shadow-[0_0_10px_rgba(0,0,0,0.5)]"
             style={{ left: `${sliderPosition}%` }}
+            onMouseDown={handleMouseDown}
+            onTouchStart={handleMouseDown}
           >
-            <div 
-              onMouseDown={handleMouseDown}
-              className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-black border-2 border-[#C6FF00] flex items-center justify-center pointer-events-auto cursor-ew-resize glow-lime-sm"
-            >
-              <ArrowLeftRight className="w-4 h-4 text-[#C6FF00]" />
+            <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-zinc-950 border-2 border-white flex items-center justify-center shadow-lg">
+              <ArrowLeftRight className="w-3.5 h-3.5 text-white" />
             </div>
           </div>
-
         </div>
 
-        {/* Quick percentage preset selectors */}
-        <div className="flex justify-center items-center gap-3 mt-4">
+        {/* Quick Position Selectors */}
+        <div className="flex items-center justify-center gap-3 mt-6">
           <button 
             onClick={() => setSliderPosition(15)}
-            className={`px-3 py-1 rounded-full text-xs font-mono transition-colors ${
-              sliderPosition < 30 ? 'bg-[#C6FF00] text-black font-bold' : 'bg-[#15161A] text-zinc-400 hover:text-white'
+            className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer ${
+              sliderPosition < 30 
+                ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-bold shadow-xs' 
+                : 'bg-zinc-100 text-zinc-600 hover:text-zinc-900 dark:bg-[#15161A] dark:text-zinc-400 dark:hover:text-white'
             }`}
           >
             Ver Solo Nuevo
           </button>
           <button 
             onClick={() => setSliderPosition(50)}
-            className={`px-3 py-1 rounded-full text-xs font-mono transition-colors ${
-              sliderPosition >= 30 && sliderPosition <= 70 ? 'bg-[#C6FF00] text-black font-bold' : 'bg-[#15161A] text-zinc-400 hover:text-white'
+            className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer ${
+              sliderPosition >= 30 && sliderPosition <= 70 
+                ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-bold shadow-xs' 
+                : 'bg-zinc-100 text-zinc-600 hover:text-zinc-900 dark:bg-[#15161A] dark:text-zinc-400 dark:hover:text-white'
             }`}
           >
             50 / 50 Split
           </button>
           <button 
             onClick={() => setSliderPosition(85)}
-            className={`px-3 py-1 rounded-full text-xs font-mono transition-colors ${
-              sliderPosition > 70 ? 'bg-[#C6FF00] text-black font-bold' : 'bg-[#15161A] text-zinc-400 hover:text-white'
+            className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all cursor-pointer ${
+              sliderPosition > 70 
+                ? 'bg-zinc-950 text-white dark:bg-white dark:text-zinc-950 font-bold shadow-xs' 
+                : 'bg-zinc-100 text-zinc-600 hover:text-zinc-900 dark:bg-[#15161A] dark:text-zinc-400 dark:hover:text-white'
             }`}
           >
             Ver Solo Antiguo
@@ -223,44 +225,44 @@ export const BeforeAfterSlider: React.FC = () => {
 
         {/* Impact Metrics Bento */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
-          <div className="p-5 rounded-xl bg-[#15161A] border border-white/10">
-            <div className="flex items-center justify-between text-xs font-mono text-[#777777] mb-2">
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#121316] border border-zinc-200/80 dark:border-white/10 shadow-xs">
+            <div className="flex items-center justify-between text-xs font-mono text-zinc-500 mb-2">
               <span>VELOCIDAD DE CARGA</span>
-              <Zap className="w-4 h-4 text-[#C6FF00]" />
+              <Zap className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-3xl text-white">0.6s</span>
-              <span className="text-xs text-[#C6FF00] font-mono">(-91% vs 6.8s)</span>
+              <span className="font-display text-3xl text-zinc-950 dark:text-white">0.6s</span>
+              <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">(-91% vs 6.8s)</span>
             </div>
-            <p className="text-xs text-[#A1A1AA] mt-2">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2 font-normal">
               Carga instantánea. El 53% de los usuarios abandona una web que tarda más de 3 segundos.
             </p>
           </div>
 
-          <div className="p-5 rounded-xl bg-[#15161A] border border-white/10">
-            <div className="flex items-center justify-between text-xs font-mono text-[#777777] mb-2">
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#121316] border border-zinc-200/80 dark:border-white/10 shadow-xs">
+            <div className="flex items-center justify-between text-xs font-mono text-zinc-500 mb-2">
               <span>CONVERSIÓN DE LEADS</span>
-              <Sparkles className="w-4 h-4 text-[#C6FF00]" />
+              <Sparkles className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-3xl text-white">+240%</span>
-              <span className="text-xs text-[#C6FF00] font-mono">(De 1.2% a 14.8%)</span>
+              <span className="font-display text-3xl text-zinc-950 dark:text-white">+240%</span>
+              <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">(De 1.2% a 14.8%)</span>
             </div>
-            <p className="text-xs text-[#A1A1AA] mt-2">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2 font-normal">
               Botones claros a WhatsApp y propuestas de valor directas duplican tus ventas.
             </p>
           </div>
 
-          <div className="p-5 rounded-xl bg-[#15161A] border border-white/10">
-            <div className="flex items-center justify-between text-xs font-mono text-[#777777] mb-2">
+          <div className="p-5 rounded-2xl bg-white dark:bg-[#121316] border border-zinc-200/80 dark:border-white/10 shadow-xs">
+            <div className="flex items-center justify-between text-xs font-mono text-zinc-500 mb-2">
               <span>AUTORIDAD DE MARCA</span>
-              <Check className="w-4 h-4 text-[#C6FF00]" />
+              <Check className="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
             </div>
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-3xl text-white">100%</span>
-              <span className="text-xs text-[#C6FF00] font-mono">DISEÑO EXCLUSIVO</span>
+              <span className="font-display text-3xl text-zinc-950 dark:text-white">100%</span>
+              <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">DISEÑO EXCLUSIVO</span>
             </div>
-            <p className="text-xs text-[#A1A1AA] mt-2">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2 font-normal">
               Tu marca se percibe como una empresa líder y moderna, justificando precios más altos.
             </p>
           </div>

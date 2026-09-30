@@ -1,4 +1,5 @@
 import React from 'react';
+import { ThemeProvider } from './context/ThemeContext';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Marquee } from './components/Marquee';
@@ -12,10 +13,10 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
-export const App: React.FC = () => {
+export const AppContent: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#0C0D0E] text-[#F4F4F5] selection:bg-[#C6FF00] selection:text-black relative">
-      {/* Sticky Navigation */}
+    <div className="min-h-screen bg-[#FAFAFA] text-zinc-900 dark:bg-[#09090B] dark:text-[#F4F4F5] selection:bg-zinc-950 selection:text-white dark:selection:bg-white dark:selection:text-zinc-950 relative transition-colors duration-200">
+      {/* Sticky Navigation with Theme Switcher */}
       <Navbar />
 
       <main>
@@ -53,6 +54,14 @@ export const App: React.FC = () => {
       {/* 11. Persistent Floating WhatsApp Trigger */}
       <FloatingWhatsApp />
     </div>
+  );
+};
+
+export const App: React.FC = () => {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 };
 
